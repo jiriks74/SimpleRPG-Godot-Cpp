@@ -3,11 +3,11 @@
 singleton=false
 load_once=true
 symbol_prefix="godot_"
-reloadable=false
+reloadable=true
 
 [entry]
 
-X11.64="res://bin/x11/libsimplerpg.so"
+X11.64="res://bin/linux/libsimplerpg.so"
 Windows.64="res://bin/win64/libsimplerpg.dll"
 OSX.64="res://bin/osx/libsimplerpg.dylib"
 

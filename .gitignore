@@ -61,3 +61,6 @@ data_*/
 
 # scons
 .sconsign.dblite
+
+# submodules
+godot-headers/
