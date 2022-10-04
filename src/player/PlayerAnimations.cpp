@@ -1,4 +1,4 @@
-#include "PlayerAnimations.h"
+#include "player/PlayerAnimations.h"
 
 using namespace godot;
 
@@ -25,6 +25,7 @@ void PlayerAnimations::set_animation_direction(Vector2 diretcion)
     _anim_tree->set("parameters/Idle/blend_position", diretcion);
     _anim_tree->set("parameters/Run/blend_position", diretcion);
     _anim_tree->set("parameters/Attack/blend_position", diretcion);
+    _anim_tree->set("parameters/Roll/blend_position", diretcion);
 }
 
 void PlayerAnimations::set_animation_state(String state)
@@ -40,5 +41,9 @@ void PlayerAnimations::set_animation_state(String state)
     else if(state == "Attack")
     {
         _anim_state->travel("Attack");
+    }
+    else if(state == "Roll")
+    {
+        _anim_state->travel("Roll");
     }
 }

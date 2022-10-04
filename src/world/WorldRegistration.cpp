@@ -1,7 +1,7 @@
-#include "WorldRegistration.h"
+#include "world/WorldRegistration.h"
 
-#include "Grass.h"
-#include "GrassDestroyEffect.h"
+#include "world/Grass.h"
+#include "world/GrassDestroyEffect.h"
 
 void WorldRegistration::register_classes()
 {

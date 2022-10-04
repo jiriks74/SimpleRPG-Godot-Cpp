@@ -1,4 +1,4 @@
-#include "Grass.h"
+#include "world/Grass.h"
 
 void Grass::_register_methods()
 {
@@ -7,7 +7,7 @@ void Grass::_register_methods()
     register_method("_process", &Grass::_process);
 
     register_method("_on_Hurtbox_area_entered", &Grass::_on_Hurtbox_area_entered);
-    register_property("Grass Effect Scene", &Grass::GrassEffect, (Ref<PackedScene>)nullptr);
+    // register_property("Grass Effect Scene", &Grass::GrassEffect, (Ref<PackedScene>)nullptr);
 }
 
 Grass::Grass()
@@ -24,6 +24,7 @@ void Grass::_init()
 
 void Grass::_ready()
 {
+    GrassEffect = ResourceLoader::get_singleton()->load("res://Effects/GrassDestroyEffect.tscn");
 }
 
 void Grass::_process(float delta)

@@ -5,6 +5,8 @@
 #include <Node2D.hpp>
 #include <PackedScene.hpp>
 #include <SceneTree.hpp>
+#include <Area2D.hpp>
+#include <ResourceLoader.hpp>
 
 using namespace godot;
 

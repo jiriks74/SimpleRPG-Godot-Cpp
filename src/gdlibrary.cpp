@@ -1,6 +1,9 @@
 #include "player/PlayerRegistration.h"
 #include "world/WorldRegistration.h"
 
+#include "enemy/bat.h"
+#include "stats/stats.h"
+
 #include <Godot.hpp>
 
 extern "C" void GDN_EXPORT godot_gdnative_init(godot_gdnative_init_options *o) {
@@ -16,4 +19,7 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void *handle) {
 
     PlayerRegistration::register_classes();
     WorldRegistration::register_classes();
+
+    godot::register_class<Bat>();
+    godot::register_class<Stats>();
 }

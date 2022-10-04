@@ -1,4 +1,4 @@
-#include "GrassDestroyEffect.h"
+#include "world/GrassDestroyEffect.h"
 
 void GrassDestroyEffect::_register_methods()
 {

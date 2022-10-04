@@ -1,5 +1,9 @@
 #!python
 import os
+import scons_compiledb
+
+env = DefaultEnvironment()  # Or with any other way
+scons_compiledb.enable_with_cmdline(env)
 
 opts = Variables([], ARGUMENTS)
 
@@ -86,6 +90,7 @@ env.Append(
         godot_bindings_path + "/include",
         godot_bindings_path + "/include/gen/",
         godot_bindings_path + "/include/core/",
+        "include",
     ]
 )
 
@@ -101,6 +106,8 @@ sources = []
 add_sources(sources, "src", )
 add_sources(sources, "src/player")
 add_sources(sources, "src/world")
+add_sources(sources, "src/enemy")
+add_sources(sources, "src/stats")
 
 library = env.SharedLibrary(target=env["target_path"] + "/" + platform + "/" + env["target_name"], source=sources)
 Default(library)

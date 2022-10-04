@@ -19,7 +19,7 @@ private:
     AnimationNodeStateMachinePlayback *_anim_state;
 
 public:
-    // Registeres needed methods in Godot
+    // Registers needed methods in Godot
     static void _register_methods();
 
     // Constructor

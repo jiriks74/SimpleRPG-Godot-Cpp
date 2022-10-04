@@ -1,0 +1,47 @@
+{
+  "configurations": {
+    "Debug": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ], // optional
+      "configuration": {
+        "request": "launch",
+        "program": "/usr/bin/godot",
+        "cwd": "${workspaceRoot}/SimpleRPG",
+        "externalConsole": true,
+        "MIMode": "gdb"
+      }
+    },
+    "Build and debug": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ], // optional
+      "variables": {
+        "pid": {
+          "shell": [
+            "/bin/bash",
+            "-c",
+            "cd ${workspaceRoot} && make"
+          ]
+        }
+      },
+      "configuration": {
+        "request": "launch",
+        "program": "/usr/bin/godot",
+        "cwd": "${workspaceRoot}/SimpleRPG",
+        "externalConsole": true,
+        "MIMode": "gdb"
+      }
+    },
+    "Editor mode": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ],
+      "configuration": {
+        "request": "launch",
+        "program": "/usr/bin/godot",
+        "cwd": "${workspaceRoot}/SimpleRPG",
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "args": ["--editor"]
+      }
+    }
+  }
+}
