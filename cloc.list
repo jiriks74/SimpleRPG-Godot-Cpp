@@ -1,0 +1,14 @@
+api.json
+.cache
+.compile_commands.json
+.git
+.gitignore
+.gitmodules
+godot-cpp
+LICENSE
+README.md
+.sconsign.dblite
+SConstruct
+.vimspector.json
+.vscode
+SimpleRPG
